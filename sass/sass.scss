@@ -1,0 +1,115 @@
+
+//LISTA
+
+$lista1: pink, black; 
+
+$primario: nth($lista1, 1);
+$secundario: nth($lista1,2);
+
+//MAPS
+
+$headings: (
+    h1: 3.5rem, 
+    h2: 1.5rem,
+);
+
+$h1: map-get($headings, h1);
+$h2: map-get($headings, h2);
+
+//EACH
+
+@each $color in $lista1 {
+    .#{$color}  {
+        background-color: $color;
+    }
+};
+
+@each $headings, $size in $headings {
+    #{$headings} {
+        font-size: $size;
+    }
+}
+
+//MIXINS
+
+@mixin tamaño ($anchura, $altura) {
+    width: $anchura;
+    height: $altura;
+}
+
+
+
+
+
+//CODIGO
+
+h1{
+    
+    -webkit-text-stroke: 1px rgb(94, 85, 85);
+    width: auto;
+    text-align: center;
+    font-family: unset;
+    font-size: $h1;
+    color: $primario;
+}
+
+h2{
+    font-size: $h2;
+    color: $secundario;
+    -webkit-text-stroke: 0.1px rgb(250, 248, 248);
+}
+
+nav{
+    text-align: center;
+
+    ul li {
+        background-color: $primario;
+        padding: 10px 20px;
+        display: inline;
+        justify-content: center; 
+    }
+    
+    li {
+
+    &:hover {
+        background-color: white;
+        
+    }
+}
+    
+}
+
+main{ 
+    width: 100%;
+    height: 150vh;
+    background-color: rgb(247, 241, 241);
+
+    article {
+        text-align: center;
+        font-family: unset;
+
+        h2{
+            background-color: $primario;
+            
+        }
+
+        p{
+            background-color: rgb(240, 208, 213);
+            @include tamaño(auto, auto );
+            margin: 20px;
+        }
+    }
+    
+}
+
+footer {
+    text-align: center;
+}
+
+
+
+
+
+
+
+

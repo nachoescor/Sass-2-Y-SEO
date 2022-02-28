@@ -1,0 +1,52 @@
+.pink {
+  background-color: pink; }
+
+.black {
+  background-color: black; }
+
+h1 {
+  font-size: 3.5rem; }
+
+h2 {
+  font-size: 1.5rem; }
+
+h1 {
+  -webkit-text-stroke: 1px #5e5555;
+  width: auto;
+  text-align: center;
+  font-family: unset;
+  font-size: 3.5rem;
+  color: pink; }
+
+h2 {
+  font-size: 1.5rem;
+  color: black;
+  -webkit-text-stroke: 0.1px #faf8f8; }
+
+nav {
+  text-align: center; }
+  nav ul li {
+    background-color: pink;
+    padding: 10px 20px;
+    display: inline;
+    justify-content: center; }
+  nav li:hover {
+    background-color: white; }
+
+main {
+  width: 100%;
+  height: 150vh;
+  background-color: #f7f1f1; }
+  main article {
+    text-align: center;
+    font-family: unset; }
+    main article h2 {
+      background-color: pink; }
+    main article p {
+      background-color: #f0d0d5;
+      width: auto;
+      height: auto;
+      margin: 20px; }
+
+footer {
+  text-align: center; }
